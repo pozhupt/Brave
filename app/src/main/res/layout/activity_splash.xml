@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:background="#000000"
+    android:layout_height="fill_parent">
+
+    <ImageView android:id="@+id/splashscreen" android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/spl"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.navigation.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_view_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/layout_right_navigation" />
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</LinearLayout>

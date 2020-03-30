@@ -7,6 +7,7 @@
     android:paddingTop="50dp">
 
     <TextView
+        android:visibility="gone"
         android:gravity="center"
         android:textColor="#ffffff"
         android:layout_width="match_parent"
@@ -15,6 +16,7 @@
         android:textAllCaps="true"/>
 
     <TextView
+        android:visibility="gone"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
@@ -24,6 +26,7 @@
         android:layout_height="0.5dp" />
 
     <ScrollView
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 <!--        <LinearLayout-->

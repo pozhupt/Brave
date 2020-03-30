@@ -49,6 +49,7 @@ public class ServerListRVAdapter extends RecyclerView.Adapter<ServerListRVAdapte
             @Override
             public void onClick(View v) {
                 listener.clickedItem(position);
+
             }
         });
     }

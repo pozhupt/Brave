@@ -7,7 +7,8 @@
     <string name="connect">Connect</string>
     <string name="connecting">Connecting</string>
     <string name="disconnect">Disconnect</string>
-    <string name="banner_token">ca-app-pub-7318551627583492/2023683793</string>
-    <string name="admob_app_id">ca-app-pub-7318551627583492~1285015877</string>
-    <string name="interstitial">ca-app-pub-7318551627583492/5959059375</string>
+    <string name="banner_token">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_app_id">ca-app-pub-2038038715841690~4712310327</string>
+    <string name="interstitial">ca-app-pub-2038038715841690/3291132035</string>
+    <string name="about_txt">This is the Android VPN using open-vpn technology . If you use your Android phone or tablet to download masses of files and want to do so quickly and securely, then Brave VPN is looking like the ideal choice.</string>
 </resources>

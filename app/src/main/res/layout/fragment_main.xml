@@ -5,10 +5,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingBottom="5dp">
+        android:paddingBottom="35dp">
 
         <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -16,6 +22,7 @@
 
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/logTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -29,14 +36,14 @@
             android:id="@+id/connectionStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
             android:orientation="vertical">
 
             <TextView
                 android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="17dp"
                 android:fontFamily="monospace"
                 android:text="Connection Status"
                 android:textColor="@color/colorWhite"
@@ -67,17 +74,17 @@
 
 
             <Button
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:clickable="true"
                 android:id="@+id/vpnImgBtn"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
                 android:background="@drawable/ic_connect"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
             <LinearLayout
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="14dp"
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
@@ -104,7 +111,7 @@
 
             <Button
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="13dp"
                 android:tag="1"
                 android:id="@+id/vpnBtn"
                 android:layout_width="160dp"
@@ -116,7 +123,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="30dp"
+            android:paddingTop="8dp"
+            android:id="@+id/statbar"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/stat_bg"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30sp"
@@ -125,41 +135,150 @@
             android:orientation="horizontal"
             android:layout_height="80dp">
 
-            <TextView
-                android:layout_gravity="center"
+            <LinearLayout
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
                 android:layout_weight="1"
-                android:id="@+id/byteInTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Bytes In: "
-                android:textColor="#ffffff"
-                android:textSize="14sp" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:letterSpacing="0.35"
+                        android:text="DOWNLOAD"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/down"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:id="@+id/byteInTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="0 KB/s"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="UPLOAD"
+                        android:letterSpacing="0.35"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/up"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:id="@+id/byteOutTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="0 KB/s"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/changebtn"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/servers_bg"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30sp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/statbar"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
 
             <TextView
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:id="@+id/byteOutTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:fontFamily="sans-serif-condensed"
-                android:text="Bytes OUT: "
+                android:text="CHANGE SERVER"
+                android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
         </LinearLayout>
 
         <com.google.android.gms.ads.AdView
+            android:visibility="gone"
             xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:layout_below="@+id/changebtn"
             android:id="@+id/adView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             ads:adSize="BANNER"
             ads:adUnitId="@string/banner_token">
         </com.google.android.gms.ads.AdView>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvs"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
     </RelativeLayout>
+
+
 </layout>
